@@ -18,4 +18,4 @@ def test_remove_random_project(app):
     app.project.remove_project_by_id(project.id)
     old_project_list.remove(project)
     new_project_list = app.project.get_projects_list()
-#     assert sorted(old_project_list, key=Project.id_or_max) == sorted(new_project_list, key=Project.id_or_max)
+    assert sorted(old_project_list, key=Project.id_or_max) == sorted(new_project_list, key=Project.id_or_max)
